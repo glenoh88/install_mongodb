@@ -1,4 +1,4 @@
 # install_mongodb
 
-TODO: Enter the cookbook description here.
+Install mongodb on Ubuntu 14.04
 
