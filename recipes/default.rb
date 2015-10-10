@@ -19,3 +19,14 @@ end
 execute 'Update apt-get' do
   command 'apt-get update'
 end
+
+#install mongodb
+execute 'install mongodb' do
+  command 'apt-get install -y mongodb-org'
+end
+
+#enable and start mongodb
+service 'mongod' do
+  supports :status => true
+  action [:enable, :start]
+end
