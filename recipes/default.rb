@@ -30,3 +30,8 @@ service 'mongod' do
   supports :status => true
   action [:enable, :start]
 end
+
+#pin mongod db version
+execute 'pin mongodb' do
+  command 'echo "mongodb-org hold" | sudo dpkg --set-selections'
+end
